@@ -19,9 +19,8 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 3,
+  "id": 22,
   "links": [],
-  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -75,6 +74,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -86,7 +86,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -145,6 +145,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -156,7 +157,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -215,6 +216,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -226,7 +228,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -285,6 +287,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -296,7 +299,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -355,6 +358,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -366,7 +370,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -425,6 +429,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -436,7 +441,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -495,6 +500,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -506,7 +512,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -610,6 +616,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -621,7 +628,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -680,6 +687,7 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -691,7 +699,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -700,7 +708,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "collections_total{instance=~\"$cluster_id.*\"}",
+          "expr": "qdrant_collection_number_of_collections{pod=~\"$pod\"}",
           "format": "table",
           "instant": true,
           "legendFormat": "__auto",
@@ -755,6 +763,12 @@
       "maxDataPoints": 100,
       "options": {
         "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
         "maxVizHeight": 300,
         "minVizHeight": 16,
         "minVizWidth": 8,
@@ -772,7 +786,7 @@
         "text": {},
         "valueMode": "text"
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -844,6 +858,12 @@
       "maxDataPoints": 100,
       "options": {
         "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
         "maxVizHeight": 300,
         "minVizHeight": 16,
         "minVizWidth": 8,
@@ -861,7 +881,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -932,6 +952,12 @@
       "id": 135,
       "options": {
         "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
         "maxVizHeight": 300,
         "minVizHeight": 16,
         "minVizWidth": 8,
@@ -949,7 +975,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -1016,6 +1042,7 @@
         "graphMode": "area",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -1027,7 +1054,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -1054,17 +1081,37 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "red",
+                  "index": 0,
+                  "text": "NO"
+                }
+              },
+              "type": "value"
+            },
+            {
+              "options": {
+                "from": 1,
+                "result": {
+                  "color": "green",
+                  "index": 1,
+                  "text": "YES"
+                },
+                "to": 99
+              },
+              "type": "range"
+            }
+          ],
+          "noValue": "NO",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
-              },
-              {
                 "color": "red",
-                "value": 80
+                "value": null
               }
             ]
           },
@@ -1081,10 +1128,11 @@
       "id": 138,
       "maxDataPoints": 100,
       "options": {
-        "colorMode": "none",
+        "colorMode": "value",
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -1096,7 +1144,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -1104,7 +1152,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "collections_vector_total{instance=~\"$cluster_id.*\"}",
+          "expr": "count(qdrant_operator_cluster_scheduled_snapshot_info_total{cluster_id=~\"$cluster_id\"})",
           "format": "table",
           "instant": true,
           "legendFormat": "__auto",
@@ -1112,7 +1160,7 @@
           "refId": "A"
         }
       ],
-      "title": "Total Number of Vectors",
+      "title": "Backup Scheduled",
       "type": "stat"
     },
     {
@@ -1289,7 +1337,7 @@
         "x": 0,
         "y": 11
       },
-      "id": 144,
+      "id": 154,
       "options": {
         "cellHeight": "sm",
         "footer": {
@@ -1304,7 +1352,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -1313,7 +1361,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_params_on_disk_payload{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_params_on_disk_payload{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "instant": true,
           "legendFormat": "__auto",
@@ -1327,7 +1375,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_params_read_fanout_factor{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_params_read_fanout_factor{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1342,7 +1390,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_params_replication_factor{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_params_replication_factor{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1357,7 +1405,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_params_write_consistency_factor{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_params_write_consistency_factor{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1372,7 +1420,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_wal_capacity_mb{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_wal_capacity_mb{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1387,7 +1435,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_wal_segments_ahead{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_wal_segments_ahead{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1402,7 +1450,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_params_vector_size{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_params_vector_size{pod=~\"qdrant-$cluster_id-.*\"}) by(collection,distance,mode,ondisk)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1417,7 +1465,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_params_shard_number{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_params_shard_number{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1447,64 +1495,72 @@
               "Time 6": true,
               "Time 7": true,
               "Time 8": true,
-              "__name__ 1": true,
-              "__name__ 2": true,
+              "__name__ 1": false,
+              "__name__ 2": false,
               "__name__ 3": true,
               "__name__ 4": true,
               "__name__ 5": true,
               "__name__ 6": true,
               "__name__ 7": true,
               "__name__ 8": true,
-              "cloud 1": true,
-              "cloud 2": true,
+              "__tenant_id__ 1": true,
+              "__tenant_id__ 2": true,
+              "__tenant_id__ 3": true,
+              "__tenant_id__ 4": true,
+              "__tenant_id__ 5": true,
+              "__tenant_id__ 6": true,
+              "__tenant_id__ 7": true,
+              "__tenant_id__ 8": true,
+              "cloud 1": false,
+              "cloud 2": false,
               "cloud 3": true,
               "cloud 4": true,
               "cloud 5": true,
               "cloud 6": true,
               "cloud 7": true,
               "cloud 8": true,
-              "cluster 1": true,
-              "cluster 2": true,
+              "cluster 1": false,
+              "cluster 2": false,
               "cluster 3": true,
               "cluster 4": true,
               "cluster 5": true,
               "cluster 6": true,
               "cluster 7": true,
               "cluster 8": true,
-              "container 1": true,
-              "container 2": true,
+              "container 1": false,
+              "container 2": false,
               "container 3": true,
               "container 4": true,
               "container 5": true,
               "container 6": true,
               "container 7": true,
               "container 8": true,
-              "endpoint 1": true,
-              "endpoint 2": true,
+              "endpoint 1": false,
+              "endpoint 2": false,
               "endpoint 3": true,
               "endpoint 4": true,
               "endpoint 5": true,
               "endpoint 6": true,
               "endpoint 7": true,
               "endpoint 8": true,
-              "environment 1": true,
-              "environment 2": true,
+              "environment 1": false,
+              "environment 2": false,
               "environment 3": true,
               "environment 4": true,
               "environment 5": true,
               "environment 6": true,
               "environment 7": true,
               "environment 8": true,
-              "exported_instance 1": true,
-              "exported_instance 2": true,
+              "exported_instance 1": false,
+              "exported_instance 2": false,
               "exported_instance 3": true,
               "exported_instance 4": true,
               "exported_instance 5": true,
               "exported_instance 6": true,
               "exported_instance 7": true,
               "exported_instance 8": true,
-              "exported_job 1": true,
-              "exported_job 2": true,
+              "exported_job 1": false,
+              "exported_job 2": false,
               "exported_job 3": true,
               "exported_job 4": true,
               "exported_job 5": true,
@@ -1519,40 +1575,48 @@
               "instance 6": true,
               "instance 7": true,
               "instance 8": true,
-              "job 1": true,
-              "job 2": true,
+              "job 1": false,
+              "job 2": false,
               "job 3": true,
               "job 4": true,
               "job 5": true,
               "job 6": true,
               "job 7": true,
               "job 8": true,
-              "kubernetes_cluster 1": true,
-              "kubernetes_cluster 2": true,
+              "kubernetes_cluster 1": false,
+              "kubernetes_cluster 2": false,
               "kubernetes_cluster 3": true,
               "kubernetes_cluster 4": true,
               "kubernetes_cluster 5": true,
               "kubernetes_cluster 6": true,
               "kubernetes_cluster 7": true,
               "kubernetes_cluster 8": true,
-              "namespace 1": true,
-              "namespace 2": true,
+              "namespace 1": false,
+              "namespace 2": false,
               "namespace 3": true,
               "namespace 4": true,
               "namespace 5": true,
               "namespace 6": true,
               "namespace 7": true,
               "namespace 8": true,
-              "pod 1": true,
-              "pod 2": true,
+              "pod 1": false,
+              "pod 2": false,
               "pod 3": true,
               "pod 4": true,
               "pod 5": true,
               "pod 6": true,
               "pod 7": true,
               "pod 8": true,
-              "service 1": true,
-              "service 2": true,
+              "scrape_job 1": false,
+              "scrape_job 2": false,
+              "scrape_job 3": true,
+              "scrape_job 4": true,
+              "scrape_job 5": true,
+              "scrape_job 6": true,
+              "scrape_job 7": true,
+              "scrape_job 8": true,
+              "service 1": false,
+              "service 2": false,
               "service 3": true,
               "service 4": true,
               "service 5": true,
@@ -1840,7 +1904,7 @@
         "x": 0,
         "y": 19
       },
-      "id": 141,
+      "id": 155,
       "options": {
         "cellHeight": "sm",
         "footer": {
@@ -1855,7 +1919,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -1864,7 +1928,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_hnsw_full_ef_construct{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_hnsw_full_ef_construct{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "instant": true,
           "legendFormat": "__auto",
@@ -1878,7 +1942,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_hnsw_full_scan_threshold{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_hnsw_full_scan_threshold{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1893,7 +1957,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_hnsw_m{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_hnsw_m{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1908,7 +1972,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_hnsw_max_indexing_threads{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_hnsw_max_indexing_threads{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1923,7 +1987,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_hnsw_on_disk{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_hnsw_on_disk{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1938,7 +2002,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_hnsw_payload_m{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_hnsw_payload_m{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1966,53 +2030,59 @@
               "Time 4": true,
               "Time 5": true,
               "Time 6": true,
-              "__name__ 1": true,
-              "__name__ 2": true,
-              "__name__ 3": true,
-              "__name__ 4": true,
-              "__name__ 5": true,
+              "__name__ 1": false,
+              "__name__ 2": false,
+              "__name__ 3": false,
+              "__name__ 4": false,
+              "__name__ 5": false,
               "__name__ 6": true,
-              "cloud 1": true,
-              "cloud 2": true,
-              "cloud 3": true,
-              "cloud 4": true,
-              "cloud 5": true,
+              "__tenant_id__ 1": true,
+              "__tenant_id__ 2": true,
+              "__tenant_id__ 3": true,
+              "__tenant_id__ 4": true,
+              "__tenant_id__ 5": true,
+              "__tenant_id__ 6": true,
+              "cloud 1": false,
+              "cloud 2": false,
+              "cloud 3": false,
+              "cloud 4": false,
+              "cloud 5": false,
               "cloud 6": true,
-              "cluster 1": true,
-              "cluster 2": true,
-              "cluster 3": true,
-              "cluster 4": true,
-              "cluster 5": true,
+              "cluster 1": false,
+              "cluster 2": false,
+              "cluster 3": false,
+              "cluster 4": false,
+              "cluster 5": false,
               "cluster 6": true,
-              "container 1": true,
-              "container 2": true,
-              "container 3": true,
-              "container 4": true,
-              "container 5": true,
+              "container 1": false,
+              "container 2": false,
+              "container 3": false,
+              "container 4": false,
+              "container 5": false,
               "container 6": true,
-              "endpoint 1": true,
-              "endpoint 2": true,
-              "endpoint 3": true,
-              "endpoint 4": true,
-              "endpoint 5": true,
+              "endpoint 1": false,
+              "endpoint 2": false,
+              "endpoint 3": false,
+              "endpoint 4": false,
+              "endpoint 5": false,
               "endpoint 6": true,
-              "environment 1": true,
-              "environment 2": true,
-              "environment 3": true,
-              "environment 4": true,
-              "environment 5": true,
+              "environment 1": false,
+              "environment 2": false,
+              "environment 3": false,
+              "environment 4": false,
+              "environment 5": false,
               "environment 6": true,
-              "exported_instance 1": true,
-              "exported_instance 2": true,
-              "exported_instance 3": true,
-              "exported_instance 4": true,
-              "exported_instance 5": true,
+              "exported_instance 1": false,
+              "exported_instance 2": false,
+              "exported_instance 3": false,
+              "exported_instance 4": false,
+              "exported_instance 5": false,
               "exported_instance 6": true,
-              "exported_job 1": true,
-              "exported_job 2": true,
-              "exported_job 3": true,
-              "exported_job 4": true,
-              "exported_job 5": true,
+              "exported_job 1": false,
+              "exported_job 2": false,
+              "exported_job 3": false,
+              "exported_job 4": false,
+              "exported_job 5": false,
               "exported_job 6": true,
               "instance 1": true,
               "instance 2": true,
@@ -2020,35 +2090,40 @@
               "instance 4": true,
               "instance 5": true,
               "instance 6": true,
-              "job 1": true,
-              "job 2": true,
-              "job 3": true,
-              "job 4": true,
-              "job 5": true,
+              "job 1": false,
+              "job 2": false,
+              "job 3": false,
+              "job 4": false,
+              "job 5": false,
               "job 6": true,
-              "kubernetes_cluster 1": true,
-              "kubernetes_cluster 2": true,
-              "kubernetes_cluster 3": true,
-              "kubernetes_cluster 4": true,
-              "kubernetes_cluster 5": true,
+              "kubernetes_cluster 1": false,
+              "kubernetes_cluster 2": false,
+              "kubernetes_cluster 3": false,
+              "kubernetes_cluster 4": false,
+              "kubernetes_cluster 5": false,
               "kubernetes_cluster 6": true,
-              "namespace 1": true,
-              "namespace 2": true,
-              "namespace 3": true,
-              "namespace 4": true,
-              "namespace 5": true,
+              "namespace 1": false,
+              "namespace 2": false,
+              "namespace 3": false,
+              "namespace 4": false,
+              "namespace 5": false,
               "namespace 6": true,
-              "pod 1": true,
-              "pod 2": true,
-              "pod 3": true,
-              "pod 4": true,
-              "pod 5": true,
+              "pod 1": false,
+              "pod 2": false,
+              "pod 3": false,
+              "pod 4": false,
+              "pod 5": false,
               "pod 6": true,
-              "service 1": true,
-              "service 2": true,
-              "service 3": true,
-              "service 4": true,
-              "service 5": true,
+              "scrape_job 1": false,
+              "scrape_job 2": false,
+              "scrape_job 3": false,
+              "scrape_job 4": false,
+              "scrape_job 5": false,
+              "service 1": false,
+              "service 2": false,
+              "service 3": false,
+              "service 4": false,
+              "service 5": false,
               "service 6": true
             },
             "includeByName": {},
@@ -2249,6 +2324,10 @@
               {
                 "id": "noValue",
                 "value": "n/a"
+              },
+              {
+                "id": "custom.width",
+                "value": 171
               }
             ]
           },
@@ -2284,7 +2363,7 @@
         "x": 13,
         "y": 19
       },
-      "id": 145,
+      "id": 156,
       "options": {
         "cellHeight": "sm",
         "footer": {
@@ -2299,12 +2378,12 @@
         "showHeader": true,
         "sortBy": [
           {
-            "desc": false,
+            "desc": true,
             "displayName": "always_ram"
           }
         ]
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -2313,7 +2392,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_quantization_always_ram{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_quantization_always_ram{pod=~\"qdrant-$cluster_id-.*\"}) by(collection, quantization_type)",
           "format": "table",
           "instant": true,
           "legendFormat": "__auto",
@@ -2327,7 +2406,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_quantization_product_compression{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_quantization_product_compression{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2342,7 +2421,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_quantization_scalar_quantile{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_quantization_scalar_quantile{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2357,7 +2436,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_quantization_scalar_type{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_quantization_scalar_type{pod=~\"qdrant-$cluster_id-.*\"}) by(collection,type)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2387,59 +2466,63 @@
               "Time 6": true,
               "Time 7": true,
               "Value #D": true,
-              "__name__ 1": true,
-              "__name__ 2": true,
-              "__name__ 3": true,
-              "__name__ 4": true,
+              "__name__ 1": false,
+              "__name__ 2": false,
+              "__name__ 3": false,
+              "__name__ 4": false,
               "__name__ 5": true,
               "__name__ 6": true,
               "__name__ 7": true,
-              "cloud 1": true,
-              "cloud 2": true,
-              "cloud 3": true,
-              "cloud 4": true,
+              "__tenant_id__ 1": true,
+              "__tenant_id__ 2": true,
+              "__tenant_id__ 3": true,
+              "__tenant_id__ 4": true,
+              "cloud 1": false,
+              "cloud 2": false,
+              "cloud 3": false,
+              "cloud 4": false,
               "cloud 5": true,
               "cloud 6": true,
               "cloud 7": true,
-              "cluster 1": true,
-              "cluster 2": true,
-              "cluster 3": true,
-              "cluster 4": true,
+              "cluster 1": false,
+              "cluster 2": false,
+              "cluster 3": false,
+              "cluster 4": false,
               "cluster 5": true,
               "cluster 6": true,
               "cluster 7": true,
-              "container 1": true,
-              "container 2": true,
-              "container 3": true,
-              "container 4": true,
+              "container 1": false,
+              "container 2": false,
+              "container 3": false,
+              "container 4": false,
               "container 5": true,
               "container 6": true,
               "container 7": true,
-              "endpoint 1": true,
-              "endpoint 2": true,
-              "endpoint 3": true,
-              "endpoint 4": true,
+              "endpoint 1": false,
+              "endpoint 2": false,
+              "endpoint 3": false,
+              "endpoint 4": false,
               "endpoint 5": true,
               "endpoint 6": true,
               "endpoint 7": true,
-              "environment 1": true,
-              "environment 2": true,
-              "environment 3": true,
-              "environment 4": true,
+              "environment 1": false,
+              "environment 2": false,
+              "environment 3": false,
+              "environment 4": false,
               "environment 5": true,
               "environment 6": true,
               "environment 7": true,
-              "exported_instance 1": true,
-              "exported_instance 2": true,
-              "exported_instance 3": true,
-              "exported_instance 4": true,
+              "exported_instance 1": false,
+              "exported_instance 2": false,
+              "exported_instance 3": false,
+              "exported_instance 4": false,
               "exported_instance 5": true,
               "exported_instance 6": true,
               "exported_instance 7": true,
-              "exported_job 1": true,
-              "exported_job 2": true,
-              "exported_job 3": true,
-              "exported_job 4": true,
+              "exported_job 1": false,
+              "exported_job 2": false,
+              "exported_job 3": false,
+              "exported_job 4": false,
               "exported_job 5": true,
               "exported_job 6": true,
               "exported_job 7": true,
@@ -2450,38 +2533,38 @@
               "instance 5": true,
               "instance 6": true,
               "instance 7": true,
-              "job 1": true,
-              "job 2": true,
-              "job 3": true,
-              "job 4": true,
+              "job 1": false,
+              "job 2": false,
+              "job 3": false,
+              "job 4": false,
               "job 5": true,
               "job 6": true,
               "job 7": true,
-              "kubernetes_cluster 1": true,
-              "kubernetes_cluster 2": true,
-              "kubernetes_cluster 3": true,
-              "kubernetes_cluster 4": true,
+              "kubernetes_cluster 1": false,
+              "kubernetes_cluster 2": false,
+              "kubernetes_cluster 3": false,
+              "kubernetes_cluster 4": false,
               "kubernetes_cluster 5": true,
               "kubernetes_cluster 6": true,
               "kubernetes_cluster 7": true,
-              "namespace 1": true,
-              "namespace 2": true,
-              "namespace 3": true,
-              "namespace 4": true,
+              "namespace 1": false,
+              "namespace 2": false,
+              "namespace 3": false,
+              "namespace 4": false,
               "namespace 5": true,
               "namespace 6": true,
               "namespace 7": true,
-              "pod 1": true,
-              "pod 2": true,
-              "pod 3": true,
-              "pod 4": true,
+              "pod 1": false,
+              "pod 2": false,
+              "pod 3": false,
+              "pod 4": false,
               "pod 5": true,
               "pod 6": true,
               "pod 7": true,
-              "service 1": true,
-              "service 2": true,
-              "service 3": true,
-              "service 4": true,
+              "service 1": false,
+              "service 2": false,
+              "service 3": false,
+              "service 4": false,
               "service 5": true,
               "service 6": true,
               "service 7": true
@@ -2560,7 +2643,7 @@
               "Value #A": "always_ram",
               "Value #B": "product_compression",
               "Value #C": "scalar_quantile",
-              "Value #D": "scalar_type",
+              "Value #D": "",
               "Value #E": "max_optimization_threads",
               "Value #F": "max_segment_size",
               "Value #G": "memmap_threshold",
@@ -2705,7 +2788,7 @@
         "x": 0,
         "y": 27
       },
-      "id": 143,
+      "id": 157,
       "options": {
         "cellHeight": "sm",
         "footer": {
@@ -2720,7 +2803,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -2729,7 +2812,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_optimizer_default_segment_number{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_optimizer_default_segment_number{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "instant": true,
           "legendFormat": "__auto",
@@ -2743,7 +2826,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_optimizer_flush_interval_sec{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_optimizer_flush_interval_sec{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2758,7 +2841,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_optimizer_indexing_threshold{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_optimizer_indexing_threshold{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2773,7 +2856,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_optimizer_max_optimization_threads{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_optimizer_max_optimization_threads{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2788,7 +2871,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_optimizer_max_segment_size{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_optimizer_max_segment_size{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2803,7 +2886,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_optimizer_memmap_threshold{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_optimizer_memmap_threshold{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2818,7 +2901,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_config_optimizer_vacuum_min_vector_number{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_config_optimizer_vacuum_min_vector_number{pod=~\"qdrant-$cluster_id-.*\"}) by(collection)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -2847,60 +2930,67 @@
               "Time 5": true,
               "Time 6": true,
               "Time 7": true,
-              "__name__ 1": true,
-              "__name__ 2": true,
-              "__name__ 3": true,
-              "__name__ 4": true,
-              "__name__ 5": true,
+              "__name__ 1": false,
+              "__name__ 2": false,
+              "__name__ 3": false,
+              "__name__ 4": false,
+              "__name__ 5": false,
               "__name__ 6": true,
               "__name__ 7": true,
-              "cloud 1": true,
-              "cloud 2": true,
-              "cloud 3": true,
-              "cloud 4": true,
-              "cloud 5": true,
+              "__tenant_id__ 1": true,
+              "__tenant_id__ 2": true,
+              "__tenant_id__ 3": true,
+              "__tenant_id__ 4": true,
+              "__tenant_id__ 5": true,
+              "__tenant_id__ 6": true,
+              "__tenant_id__ 7": true,
+              "cloud 1": false,
+              "cloud 2": false,
+              "cloud 3": false,
+              "cloud 4": false,
+              "cloud 5": false,
               "cloud 6": true,
               "cloud 7": true,
-              "cluster 1": true,
-              "cluster 2": true,
-              "cluster 3": true,
-              "cluster 4": true,
-              "cluster 5": true,
+              "cluster 1": false,
+              "cluster 2": false,
+              "cluster 3": false,
+              "cluster 4": false,
+              "cluster 5": false,
               "cluster 6": true,
               "cluster 7": true,
-              "container 1": true,
-              "container 2": true,
-              "container 3": true,
-              "container 4": true,
-              "container 5": true,
+              "container 1": false,
+              "container 2": false,
+              "container 3": false,
+              "container 4": false,
+              "container 5": false,
               "container 6": true,
               "container 7": true,
-              "endpoint 1": true,
-              "endpoint 2": true,
-              "endpoint 3": true,
-              "endpoint 4": true,
-              "endpoint 5": true,
+              "endpoint 1": false,
+              "endpoint 2": false,
+              "endpoint 3": false,
+              "endpoint 4": false,
+              "endpoint 5": false,
               "endpoint 6": true,
               "endpoint 7": true,
-              "environment 1": true,
-              "environment 2": true,
-              "environment 3": true,
-              "environment 4": true,
-              "environment 5": true,
+              "environment 1": false,
+              "environment 2": false,
+              "environment 3": false,
+              "environment 4": false,
+              "environment 5": false,
               "environment 6": true,
               "environment 7": true,
-              "exported_instance 1": true,
-              "exported_instance 2": true,
-              "exported_instance 3": true,
-              "exported_instance 4": true,
-              "exported_instance 5": true,
+              "exported_instance 1": false,
+              "exported_instance 2": false,
+              "exported_instance 3": false,
+              "exported_instance 4": false,
+              "exported_instance 5": false,
               "exported_instance 6": true,
               "exported_instance 7": true,
-              "exported_job 1": true,
-              "exported_job 2": true,
-              "exported_job 3": true,
-              "exported_job 4": true,
-              "exported_job 5": true,
+              "exported_job 1": false,
+              "exported_job 2": false,
+              "exported_job 3": false,
+              "exported_job 4": false,
+              "exported_job 5": false,
               "exported_job 6": true,
               "exported_job 7": true,
               "instance 1": true,
@@ -2910,39 +3000,44 @@
               "instance 5": true,
               "instance 6": true,
               "instance 7": true,
-              "job 1": true,
-              "job 2": true,
-              "job 3": true,
-              "job 4": true,
-              "job 5": true,
+              "job 1": false,
+              "job 2": false,
+              "job 3": false,
+              "job 4": false,
+              "job 5": false,
               "job 6": true,
               "job 7": true,
-              "kubernetes_cluster 1": true,
-              "kubernetes_cluster 2": true,
-              "kubernetes_cluster 3": true,
-              "kubernetes_cluster 4": true,
+              "kubernetes_cluster 1": false,
+              "kubernetes_cluster 2": false,
+              "kubernetes_cluster 3": false,
+              "kubernetes_cluster 4": false,
               "kubernetes_cluster 5": true,
               "kubernetes_cluster 6": true,
               "kubernetes_cluster 7": true,
-              "namespace 1": true,
-              "namespace 2": true,
-              "namespace 3": true,
-              "namespace 4": true,
-              "namespace 5": true,
+              "namespace 1": false,
+              "namespace 2": false,
+              "namespace 3": false,
+              "namespace 4": false,
+              "namespace 5": false,
               "namespace 6": true,
               "namespace 7": true,
-              "pod 1": true,
-              "pod 2": true,
-              "pod 3": true,
-              "pod 4": true,
-              "pod 5": true,
+              "pod 1": false,
+              "pod 2": false,
+              "pod 3": false,
+              "pod 4": false,
+              "pod 5": false,
               "pod 6": true,
               "pod 7": true,
-              "service 1": true,
-              "service 2": true,
-              "service 3": true,
-              "service 4": true,
-              "service 5": true,
+              "scrape_job 1": false,
+              "scrape_job 2": false,
+              "scrape_job 3": false,
+              "scrape_job 4": false,
+              "scrape_job 5": false,
+              "service 1": false,
+              "service 2": false,
+              "service 3": false,
+              "service 4": false,
+              "service 5": false,
               "service 6": true,
               "service 7": true
             },
@@ -3305,7 +3400,7 @@
         "x": 0,
         "y": 37
       },
-      "id": 151,
+      "id": 158,
       "options": {
         "cellHeight": "sm",
         "footer": {
@@ -3319,7 +3414,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -3328,7 +3423,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_role{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_role{pod=~\"qdrant-$cluster_id-.*\"}) by(pod)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -3343,7 +3438,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_is_voter{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_is_voter{pod=~\"qdrant-$cluster_id-.*\"}) by(pod)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -3358,7 +3453,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_consensus_thread_status{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_consensus_thread_status{pod=~\"qdrant-$cluster_id-.*\"}) by(pod)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -3373,7 +3468,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_term{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_term{pod=~\"qdrant-$cluster_id-.*\"}) by(pod)",
           "format": "table",
           "instant": true,
           "legendFormat": "__auto",
@@ -3387,7 +3482,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_commit{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_commit{pod=~\"qdrant-$cluster_id-.*\"}) by(pod)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -3402,7 +3497,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "qdrant_collection_pending_operations{pod=~\"qdrant-$cluster_id-.*\"}",
+          "expr": "max(qdrant_collection_pending_operations{pod=~\"qdrant-$cluster_id-.*\"}) by(pod)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -3431,84 +3526,96 @@
               "Time 5": true,
               "Time 6": true,
               "Value #C": false,
-              "__name__ 1": true,
-              "__name__ 2": true,
-              "__name__ 3": true,
-              "__name__ 4": true,
-              "__name__ 5": true,
-              "__name__ 6": true,
-              "cloud 1": true,
-              "cloud 2": true,
-              "cloud 3": true,
-              "cloud 4": true,
-              "cloud 5": true,
-              "cloud 6": true,
-              "cluster 1": true,
-              "cluster 2": true,
-              "cluster 3": true,
-              "cluster 4": true,
-              "cluster 5": true,
-              "cluster 6": true,
-              "container 1": true,
-              "container 2": true,
-              "container 3": true,
-              "container 4": true,
-              "container 5": true,
-              "container 6": true,
-              "endpoint 1": true,
-              "endpoint 2": true,
-              "endpoint 3": true,
-              "endpoint 4": true,
-              "endpoint 5": true,
-              "endpoint 6": true,
-              "environment 1": true,
-              "environment 2": true,
-              "environment 3": true,
-              "environment 4": true,
-              "environment 5": true,
-              "environment 6": true,
-              "exported_instance 1": true,
-              "exported_instance 2": true,
-              "exported_instance 3": true,
-              "exported_instance 4": true,
-              "exported_instance 5": true,
-              "exported_instance 6": true,
-              "exported_job 1": true,
-              "exported_job 2": true,
-              "exported_job 3": true,
-              "exported_job 4": true,
-              "exported_job 5": true,
-              "exported_job 6": true,
+              "__name__ 1": false,
+              "__name__ 2": false,
+              "__name__ 3": false,
+              "__name__ 4": false,
+              "__name__ 5": false,
+              "__name__ 6": false,
+              "__tenant_id__ 1": true,
+              "__tenant_id__ 2": true,
+              "__tenant_id__ 3": true,
+              "__tenant_id__ 4": true,
+              "__tenant_id__ 5": true,
+              "__tenant_id__ 6": true,
+              "cloud 1": false,
+              "cloud 2": false,
+              "cloud 3": false,
+              "cloud 4": false,
+              "cloud 5": false,
+              "cloud 6": false,
+              "cluster 1": false,
+              "cluster 2": false,
+              "cluster 3": false,
+              "cluster 4": false,
+              "cluster 5": false,
+              "cluster 6": false,
+              "container 1": false,
+              "container 2": false,
+              "container 3": false,
+              "container 4": false,
+              "container 5": false,
+              "container 6": false,
+              "endpoint 1": false,
+              "endpoint 2": false,
+              "endpoint 3": false,
+              "endpoint 4": false,
+              "endpoint 5": false,
+              "endpoint 6": false,
+              "environment 1": false,
+              "environment 2": false,
+              "environment 3": false,
+              "environment 4": false,
+              "environment 5": false,
+              "environment 6": false,
+              "exported_instance 1": false,
+              "exported_instance 2": false,
+              "exported_instance 3": false,
+              "exported_instance 4": false,
+              "exported_instance 5": false,
+              "exported_instance 6": false,
+              "exported_job 1": false,
+              "exported_job 2": false,
+              "exported_job 3": false,
+              "exported_job 4": false,
+              "exported_job 5": false,
+              "exported_job 6": false,
               "instance 1": true,
               "instance 2": true,
               "instance 3": true,
               "instance 4": true,
               "instance 5": true,
               "instance 6": true,
-              "job 1": true,
-              "job 2": true,
-              "job 3": true,
-              "job 4": true,
-              "job 5": true,
-              "job 6": true,
-              "kubernetes_cluster 1": true,
-              "kubernetes_cluster 2": true,
-              "kubernetes_cluster 3": true,
-              "kubernetes_cluster 4": true,
-              "kubernetes_cluster 5": true,
-              "kubernetes_cluster 6": true,
-              "namespace 1": true,
-              "namespace 2": true,
-              "namespace 3": true,
-              "namespace 4": true,
-              "namespace 5": true,
-              "namespace 6": true,
-              "service 1": true,
-              "service 2": true,
-              "service 3": true,
-              "service 4": true,
-              "service 5": true,
-              "service 6": true
+              "job 1": false,
+              "job 2": false,
+              "job 3": false,
+              "job 4": false,
+              "job 5": false,
+              "job 6": false,
+              "kubernetes_cluster 1": false,
+              "kubernetes_cluster 2": false,
+              "kubernetes_cluster 3": false,
+              "kubernetes_cluster 4": false,
+              "kubernetes_cluster 5": false,
+              "kubernetes_cluster 6": false,
+              "namespace 1": false,
+              "namespace 2": false,
+              "namespace 3": false,
+              "namespace 4": false,
+              "namespace 5": false,
+              "namespace 6": false,
+              "scrape_job 1": false,
+              "scrape_job 2": false,
+              "scrape_job 3": false,
+              "scrape_job 4": false,
+              "scrape_job 5": false,
+              "scrape_job 6": false,
+              "service 1": false,
+              "service 2": false,
+              "service 3": false,
+              "service 4": false,
+              "service 5": false,
+              "service 6": false
             },
             "includeByName": {},
             "indexByName": {
@@ -3697,7 +3804,7 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -3812,6 +3919,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisPlacement": "auto",
             "fillOpacity": 70,
             "hideFrom": {
               "legend": false,
@@ -3892,10 +4000,12 @@
         "rowHeight": 0.9,
         "showValue": "auto",
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -3998,7 +4108,7 @@
           }
         ]
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -4105,6 +4215,7 @@
             "axisPlacement": "auto",
             "axisSoftMax": 10,
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -4164,11 +4275,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -4248,7 +4360,7 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "10.4.14",
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -4276,6 +4388,317 @@
         "x": 0,
         "y": 73
       },
+      "id": 159,
+      "panels": [],
+      "title": "Backups",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "grafanacloud-prom"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "schedule"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 102
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "name"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 485
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "retention"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 96
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 9,
+        "x": 0,
+        "y": 74
+      },
+      "id": 160,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "11.5.0-81938",
+      "targets": [
+        {
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "count(qdrant_operator_cluster_scheduled_snapshot_info_total{cluster_id=~\"$cluster_id\"}) by(name,schedule,retention)",
+          "format": "table",
+          "instant": true,
+          "legendFormat": "__auto",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Schedules",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "Value": true,
+              "__name__": true,
+              "cloud": true,
+              "cluster": true,
+              "container": true,
+              "customer_id": true,
+              "endpoint": true,
+              "environment": true,
+              "exported_instance": true,
+              "exported_job": true,
+              "exported_namespace": true,
+              "job": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "Time": 0,
+              "Value": 5,
+              "name": 1,
+              "retention": 4,
+              "schedule": 2,
+              "schedule_short_id": 3
+            },
+            "renameByName": {}
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "grafanacloud-prom"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "phase"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "Failed": {
+                        "color": "red",
+                        "index": 2
+                      },
+                      "Running": {
+                        "color": "blue",
+                        "index": 0
+                      },
+                      "Skipped": {
+                        "color": "purple",
+                        "index": 3
+                      },
+                      "Succeeded": {
+                        "color": "green",
+                        "index": 1
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-text"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 112
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "name"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 505
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 9,
+        "y": 74
+      },
+      "id": 161,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "11.5.0-81938",
+      "targets": [
+        {
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "count(qdrant_operator_cluster_snapshot_phase{cluster_id=~\"$cluster_id\"} == 1) by(name,phase)",
+          "format": "table",
+          "instant": true,
+          "legendFormat": "__auto",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Snapshots",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "Value": true,
+              "__name__": true,
+              "cloud": true,
+              "cluster": true,
+              "container": true,
+              "customer_id": true,
+              "endpoint": true,
+              "environment": true,
+              "exported_instance": true,
+              "exported_job": true,
+              "exported_namespace": true,
+              "job": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "Time": 0,
+              "Value": 5,
+              "name": 1,
+              "retention": 4,
+              "schedule": 2,
+              "schedule_short_id": 3
+            },
+            "renameByName": {}
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 81
+      },
       "id": 1,
       "panels": [],
       "title": "Resource Usage",
@@ -4298,6 +4721,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -4372,7 +4796,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 74
+        "y": 82
       },
       "id": 2,
       "options": {
@@ -4386,10 +4810,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -4457,6 +4883,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -4520,7 +4947,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 74
+        "y": 82
       },
       "id": 15,
       "options": {
@@ -4534,10 +4961,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -4595,6 +5024,7 @@
             "axisPlacement": "auto",
             "axisSoftMax": 1,
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -4642,7 +5072,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 74
+        "y": 82
       },
       "id": 5,
       "options": {
@@ -4655,10 +5085,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -4701,6 +5133,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -4764,7 +5197,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 82
+        "y": 90
       },
       "id": 6,
       "options": {
@@ -4778,10 +5211,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -4836,6 +5271,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -4899,7 +5335,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 82
+        "y": 90
       },
       "id": 33,
       "options": {
@@ -4913,10 +5349,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -4971,6 +5409,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5018,7 +5457,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 82
+        "y": 90
       },
       "id": 8,
       "options": {
@@ -5032,10 +5471,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -5078,6 +5519,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5141,7 +5583,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 90
+        "y": 98
       },
       "id": 62,
       "options": {
@@ -5155,10 +5597,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -5213,6 +5657,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5276,7 +5721,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 90
+        "y": 98
       },
       "id": 63,
       "options": {
@@ -5290,10 +5735,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -5348,6 +5795,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5395,7 +5843,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 90
+        "y": 98
       },
       "id": 9,
       "options": {
@@ -5409,10 +5857,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -5455,6 +5905,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5502,7 +5953,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 98
+        "y": 106
       },
       "id": 7,
       "options": {
@@ -5516,10 +5967,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -5562,6 +6015,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5609,7 +6063,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 98
+        "y": 106
       },
       "id": 11,
       "options": {
@@ -5625,10 +6079,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -5672,6 +6128,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5719,7 +6176,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 98
+        "y": 106
       },
       "id": 71,
       "options": {
@@ -5735,10 +6192,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -5782,6 +6241,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5846,7 +6306,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 106
+        "y": 114
       },
       "id": 51,
       "options": {
@@ -5860,10 +6320,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -5919,6 +6381,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -5972,7 +6435,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 106
+        "y": 114
       },
       "id": 55,
       "options": {
@@ -5986,10 +6449,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6033,6 +6498,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -6093,7 +6559,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 106
+        "y": 114
       },
       "id": 54,
       "options": {
@@ -6107,10 +6573,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6166,6 +6634,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -6230,7 +6699,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 114
+        "y": 122
       },
       "id": 56,
       "options": {
@@ -6244,10 +6713,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6303,6 +6774,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -6356,7 +6828,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 114
+        "y": 122
       },
       "id": 57,
       "options": {
@@ -6370,10 +6842,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6417,6 +6891,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -6481,7 +6956,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 114
+        "y": 122
       },
       "id": 58,
       "options": {
@@ -6495,10 +6970,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6554,6 +7031,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -6600,7 +7078,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 122
+        "y": 130
       },
       "id": 10,
       "options": {
@@ -6614,10 +7092,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6660,6 +7140,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -6707,7 +7188,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 122
+        "y": 130
       },
       "id": 14,
       "options": {
@@ -6721,10 +7202,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6768,6 +7251,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -6815,7 +7299,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 122
+        "y": 130
       },
       "id": 34,
       "options": {
@@ -6829,10 +7313,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6865,7 +7351,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 130
+        "y": 138
       },
       "id": 28,
       "panels": [],
@@ -6890,6 +7376,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -6938,7 +7425,7 @@
         "h": 10,
         "w": 8,
         "x": 0,
-        "y": 131
+        "y": 139
       },
       "id": 38,
       "options": {
@@ -6952,10 +7439,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -6990,6 +7479,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7037,7 +7527,7 @@
         "h": 10,
         "w": 8,
         "x": 8,
-        "y": 131
+        "y": 139
       },
       "id": 36,
       "options": {
@@ -7051,10 +7541,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7094,7 +7586,7 @@
         "h": 10,
         "w": 8,
         "x": 16,
-        "y": 131
+        "y": 139
       },
       "id": 116,
       "options": {
@@ -7117,10 +7609,12 @@
           "values": false
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7155,6 +7649,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7203,7 +7698,7 @@
         "h": 10,
         "w": 8,
         "x": 0,
-        "y": 141
+        "y": 149
       },
       "id": 39,
       "options": {
@@ -7214,10 +7709,12 @@
           "showLegend": false
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7251,6 +7748,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7298,7 +7796,7 @@
         "h": 10,
         "w": 8,
         "x": 8,
-        "y": 141
+        "y": 149
       },
       "id": 40,
       "options": {
@@ -7309,10 +7807,12 @@
           "showLegend": false
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7346,6 +7846,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7393,7 +7894,7 @@
         "h": 10,
         "w": 8,
         "x": 16,
-        "y": 141
+        "y": 149
       },
       "id": 41,
       "options": {
@@ -7404,10 +7905,12 @@
           "showLegend": false
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7439,6 +7942,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7486,7 +7990,7 @@
         "h": 8,
         "w": 6,
         "x": 0,
-        "y": 151
+        "y": 159
       },
       "id": 18,
       "options": {
@@ -7500,10 +8004,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7547,6 +8053,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7594,7 +8101,7 @@
         "h": 8,
         "w": 6,
         "x": 6,
-        "y": 151
+        "y": 159
       },
       "id": 19,
       "options": {
@@ -7608,10 +8115,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7655,6 +8164,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7702,7 +8212,7 @@
         "h": 8,
         "w": 6,
         "x": 12,
-        "y": 151
+        "y": 159
       },
       "id": 24,
       "options": {
@@ -7716,10 +8226,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7763,6 +8275,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7810,7 +8323,7 @@
         "h": 8,
         "w": 6,
         "x": 18,
-        "y": 151
+        "y": 159
       },
       "id": 21,
       "options": {
@@ -7824,10 +8337,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7870,6 +8385,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -7917,7 +8433,7 @@
         "h": 8,
         "w": 6,
         "x": 0,
-        "y": 159
+        "y": 167
       },
       "id": 16,
       "options": {
@@ -7931,10 +8447,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -7978,6 +8496,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -8025,7 +8544,7 @@
         "h": 8,
         "w": 6,
         "x": 6,
-        "y": 159
+        "y": 167
       },
       "id": 20,
       "options": {
@@ -8039,10 +8558,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -8086,6 +8607,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -8133,7 +8655,7 @@
         "h": 8,
         "w": 6,
         "x": 12,
-        "y": 159
+        "y": 167
       },
       "id": 22,
       "options": {
@@ -8147,10 +8669,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -8194,6 +8718,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -8241,7 +8766,7 @@
         "h": 8,
         "w": 6,
         "x": 18,
-        "y": 159
+        "y": 167
       },
       "id": 23,
       "options": {
@@ -8255,10 +8780,12 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
+      "pluginVersion": "11.5.0-81938",
       "targets": [
         {
           "datasource": {
@@ -8286,8 +8813,9 @@
       "type": "timeseries"
     }
   ],
+  "preload": false,
   "refresh": "10s",
-  "schemaVersion": 39,
+  "schemaVersion": 40,
   "tags": [
     "qdrant"
   ],
@@ -8295,36 +8823,29 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "prometheus",
-          "value": "fea5vup4x3i80d"
+          "text": "grafanacloud-hossainemruz-prom",
+          "value": "grafanacloud-prom"
         },
-        "hide": 0,
         "includeAll": false,
-        "multi": false,
         "name": "datasource",
         "options": [],
         "query": "prometheus",
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
         "type": "datasource"
       },
       {
         "current": {
-          "selected": false,
-          "text": "1296366e-396a-4e2c-8f26-b399499f158f",
-          "value": "1296366e-396a-4e2c-8f26-b399499f158f"
+          "text": "b8116199-1ff6-476a-a200-049343f43cab",
+          "value": "b8116199-1ff6-476a-a200-049343f43cab"
         },
         "datasource": {
           "type": "prometheus",
           "uid": "${datasource}"
         },
         "definition": "label_values(qdrant_operator_cluster_info_total,cluster_id)",
-        "hide": 0,
         "includeAll": false,
         "label": "Cluster ID",
-        "multi": false,
         "name": "cluster_id",
         "options": [],
         "query": {
@@ -8334,13 +8855,11 @@
         },
         "refresh": 2,
         "regex": "",
-        "skipUrlSync": false,
         "sort": 1,
         "type": "query"
       },
       {
         "current": {
-          "selected": false,
           "text": "All",
           "value": "$__all"
         },
@@ -8351,7 +8870,6 @@
         "definition": "label_values(kube_pod_info{pod=~\"qdrant-$cluster_id-.*\"},pod)",
         "hide": 2,
         "includeAll": true,
-        "multi": false,
         "name": "pod",
         "options": [],
         "query": {
@@ -8361,15 +8879,13 @@
         },
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
         "sort": 1,
         "type": "query"
       },
       {
         "current": {
-          "selected": false,
-          "text": "qdrant",
-          "value": "qdrant"
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": {
           "type": "prometheus",
@@ -8378,7 +8894,6 @@
         "definition": "label_values(kube_pod_container_info{container!=\"kubectl\"},container)",
         "hide": 2,
         "includeAll": true,
-        "multi": false,
         "name": "container",
         "options": [],
         "query": {
@@ -8388,13 +8903,10 @@
         },
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
         "type": "query"
       },
       {
         "current": {
-          "selected": false,
           "text": "qdrant-cloud-client-standard-tier",
           "value": "qdrant-cloud-client-standard-tier"
         },
@@ -8405,7 +8917,6 @@
         "definition": "label_values(kube_pod_info{pod=~\"$pod\"},namespace)",
         "hide": 2,
         "includeAll": false,
-        "multi": false,
         "name": "namespace",
         "options": [],
         "query": {
@@ -8415,13 +8926,11 @@
         },
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
         "sort": 1,
         "type": "query"
       },
       {
         "current": {
-          "selected": false,
           "text": "All",
           "value": "$__all"
         },
@@ -8432,7 +8941,6 @@
         "definition": "label_values(traefik_service_requests_total{service=~\".*-qdrant-$cluster_id-.*\"},service)",
         "hide": 2,
         "includeAll": true,
-        "multi": false,
         "name": "traefik_service",
         "options": [],
         "query": {
@@ -8442,13 +8950,10 @@
         },
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
         "type": "query"
       },
       {
         "current": {
-          "selected": false,
           "text": "All",
           "value": "$__all"
         },
@@ -8459,7 +8964,6 @@
         "definition": "label_values(kube_persistentvolumeclaim_info{namespace=~\"$namespace\", persistentvolumeclaim=~\"qdrant-storage-qdrant-$cluster_id-.*\"},persistentvolumeclaim)",
         "hide": 2,
         "includeAll": true,
-        "multi": false,
         "name": "pvc_storage",
         "options": [],
         "query": {
@@ -8469,13 +8973,10 @@
         },
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
         "type": "query"
       },
       {
         "current": {
-          "selected": false,
           "text": "All",
           "value": "$__all"
         },
@@ -8486,7 +8987,6 @@
         "definition": "label_values(kube_persistentvolumeclaim_info{namespace=~\"$namespace\", persistentvolumeclaim=~\"qdrant-snapshots-qdrant-$cluster_id-.*\"},persistentvolumeclaim)",
         "hide": 2,
         "includeAll": true,
-        "multi": false,
         "name": "pvc_snapshots",
         "options": [],
         "query": {
@@ -8496,8 +8996,6 @@
         },
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
         "type": "query"
       }
     ]
@@ -8508,8 +9006,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Qdrant Cloud Dashboard",
+  "title": "Qdrant Cloud Public Dashboard",
   "uid": "d22a069c-5c16-4987-b9da-820be8383e48",
-  "version": 47,
+  "version": 12,
   "weekStart": ""
 }
