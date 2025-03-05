@@ -1061,7 +1061,7 @@
             "uid": "$datasource"
           },
           "editorMode": "code",
-          "expr": "sum(traefik_service_request_duration_seconds_sum{service=~\"kube-system-qdrant-$cluster_id.*\"}) / sum(traefik_service_requests_total{service=~\"kube-system-qdrant-$cluster_id.*\"}) * 1000",
+          "expr": "sum(traefik_service_request_duration_seconds_sum{service=~\".*-qdrant-$cluster_id.*\"}) / sum(traefik_service_requests_total{service=~\".*-qdrant-$cluster_id.*\"}) * 1000",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -7615,7 +7615,7 @@
             "uid": "$datasource"
           },
           "editorMode": "code",
-          "expr": "sum(increase(traefik_service_requests_total{service=~\"kube-system-qdrant-$cluster_id.*\"}[12h])) by (method, code)",
+          "expr": "sum(increase(traefik_service_requests_total{service=~\".*-qdrant-$cluster_id.*\"}[12h])) by (method, code)",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
