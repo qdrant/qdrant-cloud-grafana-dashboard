@@ -217,7 +217,7 @@
           "refId": "A"
         }
       ],
-      "title": "Operator Versions (AWS)",
+      "title": "Operator Versions",
       "transformations": [
         {
           "id": "organize",
@@ -746,7 +746,7 @@
           "refId": "A"
         }
       ],
-      "title": "Max Concurrent Worker (AWS)",
+      "title": "Max Concurrent Workers",
       "transformations": [
         {
           "id": "organize",
