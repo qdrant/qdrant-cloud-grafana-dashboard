@@ -8818,21 +8818,55 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 6
+        "y": 12
       },
       "id": 231,
       "panels": [
         {
           "datasource": {
-            "type": "prometheus",
             "uid": "${datasource}"
           },
           "description": "Number of used system threads",
           "fieldConfig": {
             "defaults": {
               "color": {
-                "mode": "thresholds"
+                "mode": "palette-classic"
               },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "showValues": false,
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "dashed"
+                }
+              },
+              "fieldMinMax": false,
               "mappings": [],
               "thresholds": {
                 "mode": "absolute",
@@ -8851,48 +8885,39 @@
             "overrides": []
           },
           "gridPos": {
-            "h": 4,
+            "h": 7,
             "w": 8,
             "x": 0,
-            "y": 7
+            "y": 25
           },
           "id": 232,
           "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "percentChangeColorMode": "standard",
-            "reduceOptions": {
+            "legend": {
               "calcs": [
                 "lastNotNull"
               ],
-              "fields": "",
-              "values": false
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
             },
-            "showPercentChange": false,
-            "textMode": "auto",
-            "wideLayout": true
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
           },
           "pluginVersion": "12.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${datasource}"
-              },
               "editorMode": "builder",
-              "exemplar": false,
-              "expr": "sum(process_threads{cluster_id=\"$cluster_id\"})",
-              "format": "time_series",
-              "instant": false,
-              "legendFormat": "__auto",
+              "expr": "sum by(pod, container) (process_threads{cluster_id=\"$cluster_id\"})",
+              "legendFormat": "Threads {{pod}}",
               "range": true,
               "refId": "A"
             }
           ],
           "title": "Process Threads",
-          "type": "stat"
+          "type": "timeseries"
         },
         {
           "datasource": {
@@ -8903,7 +8928,41 @@
           "fieldConfig": {
             "defaults": {
               "color": {
-                "mode": "thresholds"
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "showValues": false,
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
               },
               "mappings": [],
               "thresholds": {
@@ -8918,33 +8977,57 @@
                     "value": 10
                   }
                 ]
-              }
+              },
+              "unit": "sishort"
             },
-            "overrides": []
+            "overrides": [
+              {
+                "__systemRef": "hideSeriesFrom",
+                "matcher": {
+                  "id": "byNames",
+                  "options": {
+                    "mode": "exclude",
+                    "names": [
+                      "Value"
+                    ],
+                    "prefix": "All except:",
+                    "readOnly": true
+                  }
+                },
+                "properties": [
+                  {
+                    "id": "custom.hideFrom",
+                    "value": {
+                      "legend": false,
+                      "tooltip": true,
+                      "viz": true
+                    }
+                  }
+                ]
+              }
+            ]
           },
           "gridPos": {
-            "h": 4,
+            "h": 7,
             "w": 8,
             "x": 8,
-            "y": 7
+            "y": 25
           },
           "id": 238,
           "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "percentChangeColorMode": "standard",
-            "reduceOptions": {
+            "legend": {
               "calcs": [
                 "lastNotNull"
               ],
-              "fields": "",
-              "values": false
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
             },
-            "showPercentChange": false,
-            "textMode": "auto",
-            "wideLayout": true
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
           },
           "pluginVersion": "12.2.0",
           "targets": [
@@ -8955,16 +9038,16 @@
               },
               "editorMode": "builder",
               "exemplar": false,
-              "expr": "sum(process_major_page_faults_total{cluster_id=\"$cluster_id\"})",
+              "expr": "sum by(pod) (process_major_page_faults_total{cluster_id=\"$cluster_id\"})",
               "format": "time_series",
               "instant": false,
-              "legendFormat": "__auto",
+              "legendFormat": "Major Faults {{pod}}",
               "range": true,
               "refId": "A"
             }
           ],
           "title": "Process Major Page Faults",
-          "type": "stat"
+          "type": "timeseries"
         },
         {
           "datasource": {
@@ -8975,7 +9058,41 @@
           "fieldConfig": {
             "defaults": {
               "color": {
-                "mode": "thresholds"
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "showValues": false,
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
               },
               "mappings": [],
               "thresholds": {
@@ -8990,33 +9107,32 @@
                     "value": 1000
                   }
                 ]
-              }
+              },
+              "unit": "sishort"
             },
             "overrides": []
           },
           "gridPos": {
-            "h": 4,
+            "h": 7,
             "w": 8,
             "x": 16,
-            "y": 7
+            "y": 25
           },
           "id": 237,
           "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "percentChangeColorMode": "standard",
-            "reduceOptions": {
+            "legend": {
               "calcs": [
                 "lastNotNull"
               ],
-              "fields": "",
-              "values": false
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
             },
-            "showPercentChange": false,
-            "textMode": "auto",
-            "wideLayout": true
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
           },
           "pluginVersion": "12.2.0",
           "targets": [
@@ -9027,16 +9143,16 @@
               },
               "editorMode": "builder",
               "exemplar": false,
-              "expr": "sum(process_minor_page_faults_total{cluster_id=\"$cluster_id\"})",
+              "expr": "sum by(pod) (process_minor_page_faults_total{cluster_id=\"$cluster_id\"})",
               "format": "time_series",
               "instant": false,
-              "legendFormat": "__auto",
+              "legendFormat": "Minor Faults {{pod}}",
               "range": true,
               "refId": "A"
             }
           ],
           "title": "Process Minor Page Faults",
-          "type": "stat"
+          "type": "timeseries"
         },
         {
           "datasource": {
@@ -9047,7 +9163,41 @@
           "fieldConfig": {
             "defaults": {
               "color": {
-                "mode": "thresholds"
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "showValues": false,
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
               },
               "fieldMinMax": false,
               "mappings": [],
@@ -9068,28 +9218,26 @@
             "overrides": []
           },
           "gridPos": {
-            "h": 4,
-            "w": 18,
+            "h": 8,
+            "w": 7,
             "x": 0,
-            "y": 11
+            "y": 32
           },
           "id": 233,
           "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "percentChangeColorMode": "standard",
-            "reduceOptions": {
+            "legend": {
               "calcs": [
                 "lastNotNull"
               ],
-              "fields": "",
-              "values": false
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
             },
-            "showPercentChange": false,
-            "textMode": "auto",
-            "wideLayout": true
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
           },
           "pluginVersion": "12.2.0",
           "targets": [
@@ -9100,17 +9248,17 @@
               },
               "editorMode": "builder",
               "exemplar": false,
-              "expr": "sum(process_open_mmaps{cluster_id=\"$cluster_id\"})",
+              "expr": "sum by(pod) (process_open_mmaps{cluster_id=\"$cluster_id\"})",
               "format": "time_series",
               "instant": false,
               "interval": "",
-              "legendFormat": "__auto",
+              "legendFormat": "Memory Maps {{pod}}",
               "range": true,
               "refId": "A"
             }
           ],
           "title": "Process Open mmaps",
-          "type": "stat"
+          "type": "timeseries"
         },
         {
           "datasource": {
@@ -9125,6 +9273,7 @@
               },
               "fieldMinMax": false,
               "mappings": [],
+              "max": 1,
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -9138,10 +9287,10 @@
             "overrides": []
           },
           "gridPos": {
-            "h": 4,
-            "w": 6,
-            "x": 18,
-            "y": 11
+            "h": 3,
+            "w": 5,
+            "x": 7,
+            "y": 32
           },
           "id": 239,
           "options": {
@@ -9168,7 +9317,7 @@
                 "type": "prometheus",
                 "uid": "${datasource}"
               },
-              "editorMode": "builder",
+              "editorMode": "code",
               "exemplar": false,
               "expr": "sum(system_max_mmaps{cluster_id=\"$cluster_id\"})",
               "format": "time_series",
@@ -9191,7 +9340,41 @@
           "fieldConfig": {
             "defaults": {
               "color": {
-                "mode": "thresholds"
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "showValues": false,
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
               },
               "mappings": [],
               "thresholds": {
@@ -9211,28 +9394,26 @@
             "overrides": []
           },
           "gridPos": {
-            "h": 4,
-            "w": 18,
-            "x": 0,
-            "y": 15
+            "h": 8,
+            "w": 7,
+            "x": 12,
+            "y": 32
           },
           "id": 234,
           "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "percentChangeColorMode": "standard",
-            "reduceOptions": {
+            "legend": {
               "calcs": [
                 "lastNotNull"
               ],
-              "fields": "",
-              "values": false
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
             },
-            "showPercentChange": false,
-            "textMode": "auto",
-            "wideLayout": true
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
           },
           "pluginVersion": "12.2.0",
           "targets": [
@@ -9243,16 +9424,16 @@
               },
               "editorMode": "builder",
               "exemplar": false,
-              "expr": "sum(qdrant_process_open_fds{cluster_id=\"$cluster_id\"})",
+              "expr": "sum by(pod) (qdrant_process_open_fds{cluster_id=\"$cluster_id\"})",
               "format": "time_series",
               "instant": false,
-              "legendFormat": "__auto",
+              "legendFormat": "File Descriptors {{pod}}",
               "range": true,
               "refId": "A"
             }
           ],
           "title": "Process Open fds",
-          "type": "stat"
+          "type": "timeseries"
         },
         {
           "datasource": {
@@ -9279,10 +9460,10 @@
             "overrides": []
           },
           "gridPos": {
-            "h": 4,
-            "w": 6,
-            "x": 18,
-            "y": 15
+            "h": 3,
+            "w": 5,
+            "x": 19,
+            "y": 32
           },
           "id": 235,
           "options": {
@@ -9321,6 +9502,208 @@
           ],
           "title": "Process Max fds",
           "type": "stat"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "description": "Relation between process open memory maps and system wide maximum number of open memory maps",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "showValues": false,
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "fieldMinMax": false,
+              "mappings": [],
+              "max": 1,
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "text",
+                    "value": 0
+                  }
+                ]
+              },
+              "unit": "percentunit"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 5,
+            "w": 5,
+            "x": 7,
+            "y": 35
+          },
+          "id": 244,
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom",
+              "showLegend": false
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.2.0",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${datasource}"
+              },
+              "editorMode": "builder",
+              "exemplar": false,
+              "expr": "sum by(cluster_id) (process_open_mmaps{cluster_id=\"$cluster_id\"}) / (sum by(cluster_id) (system_max_mmaps{cluster_id=\"$cluster_id\"}))",
+              "format": "time_series",
+              "instant": false,
+              "interval": "",
+              "legendFormat": "Usage {{cluster_id}}",
+              "range": true,
+              "refId": "A"
+            }
+          ],
+          "title": "Usage mmaps",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "description": "Relation between the number of open file descriptors and the maximum number of open file descriptors",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "showValues": false,
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "max": 1,
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "text",
+                    "value": 0
+                  }
+                ]
+              },
+              "unit": "percentunit"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 5,
+            "w": 5,
+            "x": 19,
+            "y": 35
+          },
+          "id": 245,
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom",
+              "showLegend": false
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.2.0",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${datasource}"
+              },
+              "editorMode": "builder",
+              "exemplar": false,
+              "expr": "sum by(cluster_id) (qdrant_process_open_fds{cluster_id=\"$cluster_id\"}) / (sum by(cluster_id) (qdrant_process_max_fds{cluster_id=\"$cluster_id\"}))",
+              "format": "time_series",
+              "instant": false,
+              "legendFormat": "Usage {{cluster_id}}",
+              "range": true,
+              "refId": "A"
+            }
+          ],
+          "title": "Usage fds",
+          "type": "timeseries"
         }
       ],
       "title": "Process metrics",
@@ -9332,7 +9715,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 13
       },
       "id": 243,
       "panels": [
@@ -9402,7 +9785,7 @@
             "h": 4,
             "w": 8,
             "x": 0,
-            "y": 8
+            "y": 41
           },
           "id": 240,
           "options": {
@@ -9410,7 +9793,7 @@
               "calcs": [],
               "displayMode": "list",
               "placement": "bottom",
-              "showLegend": true
+              "showLegend": false
             },
             "tooltip": {
               "hideZeros": false,
@@ -9427,10 +9810,10 @@
               },
               "editorMode": "builder",
               "exemplar": false,
-              "expr": "sum(snapshot_creation_running{cluster_id=\"$cluster_id\"})",
+              "expr": "sum by(cluster_id) (snapshot_creation_running{cluster_id=\"$cluster_id\"})",
               "format": "time_series",
               "instant": false,
-              "legendFormat": "__auto",
+              "legendFormat": "Snapshot Creation {{cluster_id}}",
               "range": true,
               "refId": "A"
             }
@@ -9504,7 +9887,7 @@
             "h": 4,
             "w": 8,
             "x": 8,
-            "y": 8
+            "y": 41
           },
           "id": 241,
           "options": {
@@ -9512,7 +9895,7 @@
               "calcs": [],
               "displayMode": "list",
               "placement": "bottom",
-              "showLegend": true
+              "showLegend": false
             },
             "tooltip": {
               "hideZeros": false,
@@ -9529,10 +9912,10 @@
               },
               "editorMode": "builder",
               "exemplar": false,
-              "expr": "sum(snapshot_recovery_running{cluster_id=\"$cluster_id\"})",
+              "expr": "sum by(cluster_id) (snapshot_recovery_running{cluster_id=\"$cluster_id\"})",
               "format": "time_series",
               "instant": false,
-              "legendFormat": "__auto",
+              "legendFormat": "Snapshot Recovery {{cluster_id}}",
               "range": true,
               "refId": "A"
             }
@@ -9606,7 +9989,7 @@
             "h": 4,
             "w": 8,
             "x": 16,
-            "y": 8
+            "y": 41
           },
           "id": 242,
           "options": {
@@ -9614,7 +9997,7 @@
               "calcs": [],
               "displayMode": "list",
               "placement": "bottom",
-              "showLegend": true
+              "showLegend": false
             },
             "tooltip": {
               "hideZeros": false,
@@ -9631,10 +10014,10 @@
               },
               "editorMode": "builder",
               "exemplar": false,
-              "expr": "sum(snapshot_created_total{cluster_id=\"$cluster_id\"})",
+              "expr": "sum by(cluster_id) (snapshot_created_total{cluster_id=\"$cluster_id\"})",
               "format": "time_series",
               "instant": false,
-              "legendFormat": "__auto",
+              "legendFormat": "Total Snapshots {{cluster_id}}",
               "range": true,
               "refId": "A"
             }
