@@ -1058,7 +1058,7 @@
                 "uid": "$datasource"
               },
               "editorMode": "code",
-              "expr": "sum(traefik_service_request_duration_seconds_sum{service=~\".*-qdrant-$cluster_id.*\"}) / sum(traefik_service_requests_total{service=~\".*-qdrant-$cluster_id.*\"}) * 1000",
+              "expr": "sum(envoy_cluster_upstream_rq_time_sum{envoy_cluster_name=~\"$cluster_id-.+\"}) / sum(envoy_cluster_upstream_rq_time_count{envoy_cluster_name=~\"$cluster_id-.+\"})",
               "instant": false,
               "legendFormat": "__auto",
               "range": true,
@@ -7400,7 +7400,7 @@
                   }
                 ]
               },
-              "unit": "s"
+              "unit": "ms"
             },
             "overrides": []
           },
@@ -7434,14 +7434,36 @@
                 "uid": "$datasource"
               },
               "editorMode": "code",
-              "expr": "max by (method,code,service,) (rate(traefik_service_request_duration_seconds_sum{service=~\"$traefik_service\"}[$__rate_interval]) / rate(traefik_service_requests_total{service=~\"$traefik_service\"}[$__rate_interval]))",
+              "expr": "histogram_quantile(0.50, sum by (le, envoy_cluster_name) (rate(envoy_cluster_upstream_rq_time_bucket{envoy_cluster_name=~\"$envoy_cluster\"}[$__rate_interval])))",
               "hide": false,
-              "legendFormat": "{{method}} {{code}}",
+              "legendFormat": "p50 {{envoy_cluster_name}}",
               "range": true,
               "refId": "B"
+            },
+            {
+              "datasource": {
+                "uid": "$datasource"
+              },
+              "editorMode": "code",
+              "expr": "histogram_quantile(0.95, sum by (le, envoy_cluster_name) (rate(envoy_cluster_upstream_rq_time_bucket{envoy_cluster_name=~\"$envoy_cluster\"}[$__rate_interval])))",
+              "hide": false,
+              "legendFormat": "p95 {{envoy_cluster_name}}",
+              "range": true,
+              "refId": "C"
+            },
+            {
+              "datasource": {
+                "uid": "$datasource"
+              },
+              "editorMode": "code",
+              "expr": "histogram_quantile(0.99, sum by (le, envoy_cluster_name) (rate(envoy_cluster_upstream_rq_time_bucket{envoy_cluster_name=~\"$envoy_cluster\"}[$__rate_interval])))",
+              "hide": false,
+              "legendFormat": "p99 {{envoy_cluster_name}}",
+              "range": true,
+              "refId": "D"
             }
           ],
-          "title": "Average request latency",
+          "title": "Request latency (p50/p95/p99)",
           "type": "timeseries"
         },
         {
@@ -7537,8 +7559,8 @@
                 "uid": "$datasource"
               },
               "editorMode": "code",
-              "expr": "sum by (method) (rate(traefik_service_requests_total{service=~\"$traefik_service\"}[$__rate_interval]))",
-              "legendFormat": "{{method}}",
+              "expr": "sum by (envoy_cluster_name) (rate(envoy_cluster_upstream_rq_total{envoy_cluster_name=~\"$envoy_cluster\"}[$__rate_interval]))",
+              "legendFormat": "{{envoy_cluster_name}}",
               "range": true,
               "refId": "A"
             }
@@ -7606,14 +7628,14 @@
                 "uid": "$datasource"
               },
               "editorMode": "code",
-              "expr": "sum(increase(traefik_service_requests_total{service=~\".*-qdrant-$cluster_id.*\"}[12h])) by (method, code)",
+              "expr": "sum(increase(envoy_cluster_upstream_rq_xx{envoy_cluster_name=~\"$cluster_id-.+\"}[12h])) by (envoy_response_code_class)",
               "instant": false,
-              "legendFormat": "__auto",
+              "legendFormat": "{{envoy_response_code_class}}xx",
               "range": true,
               "refId": "A"
             }
           ],
-          "title": "Response Codes (by Method)",
+          "title": "Response Codes (by Class)",
           "type": "piechart"
         },
         {
@@ -7707,8 +7729,8 @@
                 "uid": "$datasource"
               },
               "editorMode": "code",
-              "expr": "sum(traefik_service_open_connections{service=~\"$traefik_service\"})",
-              "legendFormat": "{{service}}",
+              "expr": "sum(envoy_cluster_upstream_cx_active{envoy_cluster_name=~\"$envoy_cluster\"}) by (envoy_cluster_name)",
+              "legendFormat": "{{envoy_cluster_name}}",
               "range": true,
               "refId": "A"
             }
@@ -7806,8 +7828,8 @@
                 "uid": "$datasource"
               },
               "editorMode": "code",
-              "expr": "sum(rate(traefik_service_requests_bytes_total{service=~\"$traefik_service\"}[$__rate_interval]))",
-              "legendFormat": "{{service}}",
+              "expr": "sum(rate(envoy_cluster_upstream_cx_tx_bytes_total{envoy_cluster_name=~\"$envoy_cluster\"}[$__rate_interval])) by (envoy_cluster_name)",
+              "legendFormat": "{{envoy_cluster_name}}",
               "range": true,
               "refId": "A"
             }
@@ -7905,8 +7927,8 @@
                 "uid": "$datasource"
               },
               "editorMode": "code",
-              "expr": "sum(rate(traefik_service_responses_bytes_total{service=~\"$traefik_service\"}[$__rate_interval]))",
-              "legendFormat": "{{service}}",
+              "expr": "sum(rate(envoy_cluster_upstream_cx_rx_bytes_total{envoy_cluster_name=~\"$envoy_cluster\"}[$__rate_interval])) by (envoy_cluster_name)",
+              "legendFormat": "{{envoy_cluster_name}}",
               "range": true,
               "refId": "A"
             }
@@ -10155,14 +10177,14 @@
           "type": "prometheus",
           "uid": "${datasource}"
         },
-        "definition": "label_values(traefik_service_requests_total{service=~\".*-qdrant-$cluster_id-.*\"},service)",
+        "definition": "label_values(envoy_cluster_upstream_rq_total{envoy_cluster_name=~\"$cluster_id-.+\"},envoy_cluster_name)",
         "hide": 2,
         "includeAll": true,
-        "name": "traefik_service",
+        "name": "envoy_cluster",
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values(traefik_service_requests_total{service=~\".*-qdrant-$cluster_id-.*\"},service)",
+          "query": "label_values(envoy_cluster_upstream_rq_total{envoy_cluster_name=~\"$cluster_id-.+\"},envoy_cluster_name)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
