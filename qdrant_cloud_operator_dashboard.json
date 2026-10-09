@@ -38,7 +38,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "",
       "fieldConfig": {
@@ -128,7 +128,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -151,7 +151,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -205,7 +205,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -244,7 +244,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "",
       "fieldConfig": {
@@ -299,7 +299,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -351,7 +351,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "CPU usage by Qdrant operator instances across all managed cloud regions",
       "fieldConfig": {
@@ -439,7 +439,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "rate(process_cpu_seconds_total{container=\"operator\", pod=~\"qdrant-operator-v2-.*\"}[5m]) * 100",
@@ -455,7 +455,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "Memory usage by Qdrant operator instances across all managed cloud regions",
       "fieldConfig": {
@@ -543,7 +543,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "process_resident_memory_bytes{pod=~\"qdrant-operator-v2-.*\", container=\"operator\"}",
@@ -572,7 +572,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -658,7 +658,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(controller_runtime_active_workers{pod=~\"qdrant-operator-v2-.*\"}) by (controller,namespace)",
@@ -674,7 +674,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -734,7 +734,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -797,7 +797,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -884,7 +884,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(rate(controller_runtime_reconcile_total{pod=~\"qdrant-operator-v2-.*\"}[5m])) by(namespace,controller)",
@@ -900,7 +900,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -987,7 +987,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(rate(controller_runtime_reconcile_errors_total{pod=~\"qdrant-operator-v2-.*\"}[5m])) by(namespace,controller)",
@@ -1016,7 +1016,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "",
       "fieldConfig": {
@@ -1104,7 +1104,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "workqueue_depth{pod=~\"qdrant-operator-v2-.*\"}",
@@ -1120,7 +1120,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "",
       "fieldConfig": {
@@ -1208,7 +1208,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(rate(workqueue_adds_total{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace, name)",
@@ -1224,7 +1224,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "",
       "fieldConfig": {
@@ -1312,7 +1312,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(rate(workqueue_retries_total{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace, name)",
@@ -1328,7 +1328,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "",
       "fieldConfig": {
@@ -1416,7 +1416,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "rate(workqueue_unfinished_work_seconds{pod=~\"qdrant-operator-v2-.*\"}[5m])",
@@ -1432,7 +1432,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "How long in seconds an item stays in workqueue before being requested",
       "fieldConfig": {
@@ -1520,7 +1520,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(0.90, sum(rate(workqueue_queue_duration_seconds_bucket{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace, pod, name, le))",
@@ -1536,7 +1536,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "How long in seconds an item stays in workqueue before being requested",
       "fieldConfig": {
@@ -1624,7 +1624,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(0.99, sum(rate(workqueue_queue_duration_seconds_bucket{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace, pod, name, le))",
@@ -1640,7 +1640,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "How long in seconds processing an item from workqueue takes.",
       "fieldConfig": {
@@ -1728,7 +1728,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(0.90, sum(rate(workqueue_work_duration_seconds_bucket{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace, pod, name, le))",
@@ -1744,7 +1744,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "How long in seconds processing an item from workqueue takes.",
       "fieldConfig": {
@@ -1832,7 +1832,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(0.99, sum(rate(workqueue_work_duration_seconds_bucket{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace, pod, name, le))",
@@ -1861,7 +1861,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "Number of HTTP requests",
       "fieldConfig": {
@@ -1949,7 +1949,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(rate(rest_client_requests_total{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace,pod)",
@@ -1965,7 +1965,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "Number of HTTP requests categorized by HTTP method",
       "fieldConfig": {
@@ -2053,7 +2053,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(rate(rest_client_requests_total{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace,method)",
@@ -2082,7 +2082,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "Time taken by the cluster-manager to process a call in seconds",
       "fieldConfig": {
@@ -2170,7 +2170,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(0.90, sum(rate(qdrant_operator_cluster_manager_call_duration_seconds_bucket{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace, pod, le))",
@@ -2186,7 +2186,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "Time taken by the cluster-manager to process a call in seconds",
       "fieldConfig": {
@@ -2274,7 +2274,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(0.99, sum(rate(qdrant_operator_cluster_manager_call_duration_seconds_bucket{pod=~\"qdrant-operator-v2-.*\"}[5m])) by (namespace, pod, le))",
@@ -2290,7 +2290,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "CPU usage by cluster-manager instances across all managed cloud regions",
       "fieldConfig": {
@@ -2378,7 +2378,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "rate(process_cpu_seconds_total{pod=~\"qdrant-cluster-manager-.*\", container=\"qdrant-cluster-manager\"}[5m]) * 100",
@@ -2394,7 +2394,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "grafanacloud-prom"
+        "uid": "${datasource}"
       },
       "description": "Memory usage by Qdrant operator instances across all managed cloud regions",
       "fieldConfig": {
@@ -2482,7 +2482,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "mimir"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "process_resident_memory_bytes{pod=~\"qdrant-cluster-manager-.*\", container=\"qdrant-cluster-manager\"}",
@@ -2501,7 +2501,19 @@
   "schemaVersion": 41,
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {},
+        "includeAll": false,
+        "label": "Datasource",
+        "name": "datasource",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "",
+        "type": "datasource"
+      }
+    ]
   },
   "time": {
     "from": "now-6h",

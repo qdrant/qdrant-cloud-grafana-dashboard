@@ -88,7 +88,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -159,7 +159,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -230,7 +230,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -301,7 +301,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -372,7 +372,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -443,7 +443,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -514,7 +514,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -630,7 +630,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -701,7 +701,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1350,7 +1350,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1364,7 +1364,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1379,7 +1379,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1394,7 +1394,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1409,7 +1409,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1424,7 +1424,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1912,7 +1912,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2371,7 +2371,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2385,7 +2385,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2400,7 +2400,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2415,7 +2415,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2786,7 +2786,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3393,7 +3393,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3408,7 +3408,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3423,7 +3423,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3438,7 +3438,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3452,7 +3452,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3467,7 +3467,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3979,7 +3979,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "disableTextWrap": false,
               "editorMode": "builder",
@@ -4077,7 +4077,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "fea5vup4x3i80d"
+                "uid": "${datasource}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -10061,10 +10061,7 @@
   "templating": {
     "list": [
       {
-        "current": {
-          "text": "grafanacloud-hossainemruz-prom",
-          "value": "grafanacloud-prom"
-        },
+        "current": {},
         "includeAll": false,
         "name": "datasource",
         "options": [],
@@ -10074,10 +10071,7 @@
         "type": "datasource"
       },
       {
-        "current": {
-          "text": "b8116199-1ff6-476a-a200-049343f43cab",
-          "value": "b8116199-1ff6-476a-a200-049343f43cab"
-        },
+        "current": {},
         "datasource": {
           "type": "prometheus",
           "uid": "${datasource}"
@@ -10145,10 +10139,7 @@
         "type": "query"
       },
       {
-        "current": {
-          "text": "qdrant-cloud-client-standard-tier",
-          "value": "qdrant-cloud-client-standard-tier"
-        },
+        "current": {},
         "datasource": {
           "type": "prometheus",
           "uid": "${datasource}"
