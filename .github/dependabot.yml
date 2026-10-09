@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    groups:
+      # No update-types filter, so majors are batched here too. Actions are
+      # SHA-pinned with a version comment, and a major bump is usually a runner
+      # or Node runtime bump rather than an interface change, so one PR for all
+      # of them is the useful granularity.
+      github-actions:
+        applies-to: version-updates
+        patterns:
+          - "*"
